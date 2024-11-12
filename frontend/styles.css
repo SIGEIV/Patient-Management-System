@@ -1,0 +1,244 @@
+/* Reset and Global Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(120deg, #9b59b6, #2ecc71); /* Purple to Lime Green Gradient */
+    color: #333; /* Main text color */
+    animation: fadeInBody 1s ease-in;
+    background-attachment: fixed;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Background Pattern Overlay */
+body::before {
+    content: "";
+    background-image: url('background-pattern.png'); /* Subtle pattern */
+    opacity: 0.05;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-repeat: repeat;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #0073e6;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation Styles */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ddd;
+}
+
+/* Main Container for Forms and Content */
+.container {
+    width: 50%;
+    max-width: 800px;
+    margin: 40px auto;
+    background: linear-gradient(135deg, #ffffff, #f9f2ec); /* Light gradient */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(155, 89, 182, 0.2);
+    position: relative;
+    animation: slideInForm 1s ease-out;
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+/* Form and Input Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="password"], 
+input[type="date"], 
+input[type="time"], 
+input[type="number"],
+select,
+textarea {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 1em;
+    background-color: #fdfdfd;
+    transition: all 0.3s ease;
+}
+
+input:hover, select:hover, textarea:hover {
+    border-color: #9b59b6;
+    box-shadow: 0 0 10px rgba(155, 89, 182, 0.2);
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #2ecc71;
+    box-shadow: 0 0 10px rgba(46, 204, 113, 0.3);
+}
+
+/* Button Styling */
+button {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+    font-size: 1.1em;
+    font-weight: bold;
+    box-shadow: 0 8px 20px rgba(155, 89, 182, 0.3);
+}
+
+button[type="submit"] {
+    background-color: #9b59b6;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: #8e44ad;
+    transform: translateY(-3px);
+}
+
+button[type="button"] {
+    background-color: #2ecc71;
+    color: white;
+}
+
+button[type="button"]:hover {
+    background-color: #27ae60;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    animation: fadeInTable 1s ease-in-out;
+}
+
+th, td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #9b59b6;
+    color: white;
+    font-weight: bold;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Decorative Circles for Background Elements */
+.container::before, 
+.container::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.15;
+}
+
+.container::before {
+    top: -60px;
+    left: -60px;
+    width: 250px;
+    height: 250px;
+    background-color: #9b59b6;
+}
+
+.container::after {
+    bottom: -60px;
+    right: -60px;
+    width: 250px;
+    height: 250px;
+    background-color: #2ecc71;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #0073e6;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    button {
+        font-size: 1em;
+    }
+}
+
+/* Animations */
+@keyframes fadeInBody {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInForm {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInTable {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

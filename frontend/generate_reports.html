@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Reports</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+    <style>
+        body {
+            display: flex;
+            justify-content: center; /* Center the form horizontally */
+            align-items: center;     /* Center the form vertically */
+            height: 100vh;          /* Full viewport height */
+            margin: 0;              /* Remove default margin */
+            background-color: #f0f0f0; /* Optional: Background color for the body */
+        }
+         .nav {
+    display: flex;
+    justify-content: center; /* Center the navigation links */
+    background-color: #333;
+    width: 100%; /* Ensure navigation spans the full width */
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    z-index: 10;
+}
+
+.nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+        .form-container {
+            width: 100%;
+            max-width: 800px; /* Increased max-width for the form */
+            padding: 20px;    /* Increased padding for better spacing */
+            background-color: #ffffff; /* White background for the form */
+            border-radius: 8px; /* Rounded corners for the form */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for better visibility */
+            margin-top: 40px; /* Increased margin-top to lower the form */
+            text-align: center; /* Center align text within the form */
+        }
+        form label {
+            font-size: 14px;  /* Smaller font size for labels */
+            display: block;    /* Ensure labels are block elements */
+            text-align: left;  /* Left align labels */
+            margin-bottom: 5px; /* Margin below the label */
+        }
+        form input, form select {
+            font-size: 14px;  /* Smaller font size for inputs */
+            padding: 10px;    /* Adjusted padding for inputs */
+            width: 100%;      /* Full width for input elements */
+            margin-bottom: 10px; /* Added margin for spacing */
+            border: 1px solid #ccc; /* Light border for inputs */
+            border-radius: 4px; /* Rounded corners for inputs */
+        }
+        form input[type="submit"] {
+            padding: 10px;    /* Increased padding for the submit button */
+            background-color: #4CAF50; /* Green background for the submit button */
+            color: white;     /* White text for the submit button */
+            border: none;     /* Remove border */
+            border-radius: 4px; /* Rounded corners for the button */
+            cursor: pointer;  /* Pointer cursor on hover */
+        }
+        form input[type="submit"]:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="admin_dashboard.php">Home</a> <!-- Link to Dashboard Home -->
+         <a href="add_patient.html">Add Patient</a> 
+         <a href="appointment.html">Appointment</a> 
+        <a href="invoice.html">Invoice</a> <!-- Link to Invoices -->
+         <a href="generate_reports.html">Report</a>
+          <a href="view_medical_records.php">Medical Records</a>
+        <a href="admin_login.html">log out</a> <!-- Link to Log Out -->
+    </div>
+    <div class="form-container">
+        <h1>Generate Reports</h1> <!-- Main title -->
+        <h2>Select criteria to generate reports:</h2> <!-- Heading for the form -->
+        <form action="show_report.php" method="post">
+            <!-- Report Type Selection -->
+            <label for="report_type">Select Report Type:</label>
+            <select id="report_type" name="report_type" required>
+                <option value="patients_per_doctor">Number of Patients Seen per Doctor</option>
+                <option value="frequently_diagnosed_conditions">Frequently Diagnosed Conditions</option>
+                <option value="appointment_volumes">Appointment Volumes by Time of Day</option>
+            </select>
+
+            <!-- Date Range -->
+            <label for="start_date">Start Date:</label>
+            <input type="date" id="start_date" name="start_date" required>
+
+            <label for="end_date">End Date:</label>
+            <input type="date" id="end_date" name="end_date" required>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Generate Report">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    
+    <title>Patient Management System | Admin Login</title>
+</head>
+
+<body>
+
+    <div>
+
+        <!-- Nav Bar -->
+        <nav class="navbar navbar1">
+            <div class="container-fluid">
+                <a href='' class="navbar-brand d">Patient Management System | User Authentication</a>
+            </div>
+        </nav>
+
+        <!-- Admin Login Section -->
+        <div class="container">
+            <h2 class="text-center">Admin Login</h2>
+            <form method="post" action="admin_login.php" class="mb-4">
+                <div class="mb-3">
+                    <label for="adminEmail" class="form-label">Admin Email</label>
+                    <input class="form-control" type='text' name="adminEmail" id="adminEmail" required />
+                </div>
+
+                <div class="mb-3">
+                    <label for="adminPassword" class="form-label">Admin Password</label>
+                    <input class="form-control" type="password" name="adminPassword" id="adminPassword" required />
+                </div>
+
+                <button type="submit" class="btn btn-danger">Admin Log In</button>
+                <button type="button" class="btn btn-secondary" onclick="window.location.href='index.html';">Back to Home</button>
+            </form>
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-center mt-5">
+            <p>&copy; 2024 Patient Management System by: Brian Sigei</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

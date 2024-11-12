@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clinic Management System</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS -->
+    <style>
+        .nav {
+            display: flex; /* Use flexbox for navigation */
+            justify-content: center; /* Center the navigation links */
+            background-color: #333; /* Dark background for navigation */
+        }
+        .nav a {
+            color: white; /* White text color for links */
+            padding: 14px 20px; /* Padding for links */
+            text-decoration: none; /* Remove underline from links */
+            text-align: center; /* Center align link text */
+        }
+        .nav a:hover {
+            background-color: #ddd; /* Light background on hover */
+            color: black; /* Dark text color on hover */
+        }
+        img {
+            width: 1500px; /* Image width */
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .main-form p {
+            font-size: 16px;
+            color: #333;
+        }
+        .button-form {
+            max-width: 400px;
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .button-form:hover {
+            background-color: #45a049; /* Hover effect */
+        }
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Clinic</h1>
+        
+    </header>
+    <section>
+        <div class="nav">
+        <a href="index.html">Home</a> <!-- Link to Dashboard Home -->
+        <a href="input_patient_id.html">Appointment </a> <!-- Link to Appointment History -->
+        <a href="view_invoices.html">Invoice</a> <!-- Link to Invoices -->
+        <a href="admin_login.html">Staff Portal</a> <!-- Link to Log Out -->
+    </div>
+        <img src="admin.png" alt="System Logo">
+        <h2>About Our Clinic</h2>
+        <p>Providing top-notch healthcare services with a team of skilled professionals.</p>
+    </section>
+
+   <footer class="text-center mt-5">
+            <p>&copy; 2024 Patient Management System by: Brian Sigei</p>
+        </footer>
+</body>
+</html>
